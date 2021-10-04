@@ -1,7 +1,16 @@
 # Dead By Daylight Config Editor
-Dead By Daylight Config ayarlarını direkt olarak değiştirebilmenizi sağlar.
+Dead By Daylight Config ayarlarını direkt olarak değiştirebilmenizi sağlar. 
 
 ![Dead By Daylight Config Editor](https://media.discordapp.net/attachments/490508014026096650/894643165829660743/unknown.png) 
+
+# Gerekli İşletim Sistemi
+
+* Windows 7 ve sonrası
+
+# İndirme
+
+Programı bilgisayarınıza kurun ve açın. Config dosyalarınız varsa ayarlarınızı değiştirmeye başlayabilirsiniz.
+
 
 # Değiştirilen Dosyalar
 
@@ -32,3 +41,6 @@ Etkinleştirildiğinde **Engine.ini**'ye ekleme yapar. Devre dışı bırakıld�
 
 ## Otomatik Ayarlar
 Aynı şekilde yukaridaki kategorileri değiştirmektedir. Tek farkı otomatik olarak istenilen şekilde düzenlemesidir. 
+
+## Sıfırlama
+Config dosyası güncellemeler ile değişebileceği için ne yazıkki sıfırlamak için config dosyalarını silmekten başka çaremiz kalmamaktadır. Yeniden oluşması için oyunu açmanız yeterlidir.
