@@ -9,8 +9,26 @@ Dead By Daylight Config ayarlarını direkt olarak değiştirebilmenizi sağlar.
 
 ## Grafik Ayarları:
 **Görüş Mesafesi Kalitesi:** GameUserSettings.ini **->** ViewDistanceQuality  
-**Kenar Yumuşatma        :** GameUserSettings.ini **->** AntiAliasingQuality  
-**Gölge Kalitesi         :** GameUserSettings.ini **->** ShadowQuality  
-**Post Processing        :** GameUserSettings.ini **->** PostProcessQuality  
-**Kaplama Kalitesi       :** GameUserSettings.ini **->** TextureQuality  
-**Efekt Kalitesi         :** GameUserSettings.ini **->** EffectsQuality  
+**Kenar Yumuşatma:** GameUserSettings.ini **->** AntiAliasingQuality  
+**Gölge Kalitesi:** GameUserSettings.ini **->** ShadowQuality  
+**Post Processing:** GameUserSettings.ini **->** PostProcessQuality  
+**Kaplama Kalitesi:** GameUserSettings.ini **->** TextureQuality  
+**Efekt Kalitesi:** GameUserSettings.ini **->** EffectsQuality  
+
+## 3D Resolution:
+Girilen değer direkt olarak **GameUserSettings.ini**'de bulunan **ScreenResolution** değerini değiştirmektedir.
+
+## FPS Settings
+**GameUserSettings.ini**'de bulunan **bUseVSync** değeri false olarak değiştirilir.  
+
+**120 FPS:** GameUserSettings.ini **->** FrameRateLimit = 150  
+**Limitsiz FPS:** GameUserSettings.ini **->** FrameRateLimit = 0  
+
+## Anti Aliasing
+Etkinleştirildiğinde **Engine.ini**'ye ekleme yapar. Devre dışı bırakıldığında bu kısım tekrardan silinir.
+
+**Düşük:** Değer **1'e** çekilir.  
+**Yüksek:** Değer **w'ye** çekilir.
+
+## Otomatik Ayarlar
+Aynı şekilde yukaridaki kategorileri değiştirmektedir. Tek farkı otomatik olarak istenilen şekilde düzenlemesidir. 
