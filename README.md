@@ -40,7 +40,7 @@ Etkinleştirildiğinde **Engine.ini**'ye ekleme yapar. Devre dışı bırakıld�
 **Yüksek:** Değer **2'ye** çekilir.
 
 ## Otomatik Ayarlar
-Aynı şekilde yukaridaki kategorileri değiştirmektedir. Tek farkı otomatik olarak istenilen şekilde düzenlemesidir. 
+Aynı şekilde yukarıdaki kategorileri değiştirmektedir. Tek farkı otomatik olarak istenilen şekilde düzenlemesidir. 
 
 ## Sıfırlama
 Config dosyası güncellemeler ile değişebileceği için ne yazıkki sıfırlamak için config dosyalarını silmekten başka çaremiz kalmamaktadır. Yeniden oluşması için oyunu açmanız yeterlidir.
