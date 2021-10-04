@@ -14,7 +14,7 @@ Programı bilgisayarınıza kurun ve açın. Config dosyalarınız varsa ayarlar
 
 # Değiştirilen Dosyalar
 
-**Appdata/Local/DeadByDaylight/SavednConfig/WindowsNoEditor** dizinindeki **GameUserSettings.ini** ve **Engine.ini** dosyaları düzenlenmektedir. 
+**Appdata/Local/DeadByDaylight/Saved/Config/WindowsNoEditor** dizinindeki **GameUserSettings.ini** ve **Engine.ini** dosyaları düzenlenmektedir. 
 
 ## Grafik Ayarları:
 **Görüş Mesafesi Kalitesi:** GameUserSettings.ini **->** ViewDistanceQuality  
