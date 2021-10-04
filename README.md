@@ -37,7 +37,7 @@ Girilen değer direkt olarak **GameUserSettings.ini**'de bulunan **ScreenResolut
 Etkinleştirildiğinde **Engine.ini**'ye ekleme yapar. Devre dışı bırakıldığında bu kısım tekrardan silinir.
 
 **Düşük:** Değer **1'e** çekilir.  
-**Yüksek:** Değer **w'ye** çekilir.
+**Yüksek:** Değer **2'ye** çekilir.
 
 ## Otomatik Ayarlar
 Aynı şekilde yukaridaki kategorileri değiştirmektedir. Tek farkı otomatik olarak istenilen şekilde düzenlemesidir. 
