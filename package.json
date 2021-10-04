@@ -1,0 +1,25 @@
+{
+  "name": "dbd-config-editor",
+  "version": "1.0.0",
+  "description": "Dead By Daylight Config Editor",
+  "main": "main.js",
+  "repository": "https://github.com/RealEmur/Dead-By-Daylight-Config-Editor",
+  "author": "Emur",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+  },
+  "build": {
+    "productName": "Dead By Daylight Config Editor",
+    "win": {
+      "icon": "./build/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^15.1.1",
+    "electron-builder": "^22.11.7"
+  }
+}

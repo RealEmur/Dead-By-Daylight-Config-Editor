@@ -1,0 +1,613 @@
+@font-face {
+    font-family: Roboto;
+    src: url("./Roboto-Regular.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: Roboto;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #2B2B2B;
+}
+
+
+.container{
+    width: 100%;
+    height: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container{
+    flex: 6;
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 50% 50%;
+}
+
+.right-container{
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Static */
+.shadow{
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+}
+/* End Static */
+
+
+/* Reset Alert */
+
+.reset-alert{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 20px 20px;
+    width: 300px;
+    background-color: #272626;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reset-alert span{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.reset-alert button{
+    padding: 5px 10px;
+    background: rgb(9, 88, 9);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.reset-alert button:hover{
+    background: rgb(12, 107, 12);
+}
+
+/* End Reset Alert */
+
+/* Notifications */
+.notifications{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+.notifications .notification{
+    width: 400px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications .notification.success{
+    background-color: rgb(23, 131, 28);
+}
+
+.notifications .notification.failed{
+    background-color: rgb(116, 7, 21);
+}
+
+.notifications .notification p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.notifications .notification span{
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.notifications .notification span:hover{
+    color: rgb(194, 191, 191)
+}
+
+/* End Notifications */
+
+/* Footer */
+footer{
+    width: calc(100- 50px);
+    height: 20px;
+    padding: 10px 25px;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .section{
+    display: flex;
+    align-items: center;
+}
+
+footer .section.reload img{
+    padding: 5px 10px;
+    border-radius: 10px;
+    height: 25px;
+    filter: invert(58%) sepia(0%) saturate(26%) hue-rotate(199deg) brightness(85%) contrast(74%);
+    cursor: pointer;
+}
+
+footer .section a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer .section p{
+    color: rgb(156, 152, 152);
+    font-size: 15px;
+}
+
+footer .section .icons{
+    padding-top: 7px;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+footer .section .icons img{
+    height: 25px;
+    cursor: pointer;
+}
+
+footer .section .icons img.twitch{
+    height: 20px;
+}
+
+
+/* End Footer */
+
+/* Fps Settings */
+
+.left-container .fps-settings-container{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    width: 435px;
+    height: 140px;
+    background-color: #353333;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 16px;
+}
+
+.left-container .fps-settings-container .title{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-container .fps-settings-container .title p{
+    font-size: 25px;
+    font-weight: 700;
+    color: #EDE5E5;
+    margin-bottom: 13px;
+}
+
+.left-container .fps-settings-container .title span{
+    width: 350px;
+    border: 1px solid #fff;
+}
+
+.left-container .fps-settings-container .buttons{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-container .fps-settings-container .buttons button{
+    background: #474545;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    width: 160px;
+    height: 35px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.left-container .fps-settings-container .buttons button:hover{
+    background: #333232;
+}
+
+.left-container .fps-settings-container .buttons button:first-child{
+    margin-right: 25px;
+}
+
+/* End Fps Settings */
+
+/* 3D Resolution */
+.left-container .resolution-container{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background: #353333;
+    border-radius: 15px;
+    width: 210px;
+    height: 230px;
+    margin: auto;
+    margin-left: 20px;
+}
+
+.left-container .resolution-container .title{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-container .resolution-container .title p{
+    font-size: 25px;
+    font-weight: 700;
+    color: #EDE5E5;
+    margin-bottom: 13px;
+}
+
+.left-container .resolution-container .title span{
+    width: 180px;
+    border: 1px solid #fff;
+    margin-bottom: 19px;
+}
+
+.left-container .resolution-container .input{
+    margin-top: 20px;
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-container .resolution-container .input p{
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    width: 100px;
+    text-align: center;
+}
+
+.left-container .resolution-container .input img.arrow{
+    width: 30px;
+    filter: invert(58%) sepia(0%) saturate(26%) hue-rotate(199deg) brightness(85%) contrast(74%);
+    cursor: pointer;
+}
+
+.left-container .resolution-container .input img.arrow:last-child{
+    transform: rotate(180deg);
+}
+
+.left-container .resolution-container .button{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-container .resolution-container .button button{
+    border: none;
+    background: #66AA3D;
+    border-radius: 15px;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #FFF6F6;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.left-container .resolution-container .button button:hover{
+    background: #61963f;
+}
+
+/* End 3D Resolution */
+
+/* Anti Aliasing */
+.left-container .anti-aliasing-container{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background: #353333;
+    border-radius: 15px;
+    width: 210px;
+    height: 230px;
+    margin: auto;
+    margin-right: 18px;
+}
+
+.left-container .anti-aliasing-container .title{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-container .anti-aliasing-container .title p{
+    font-size: 25px;
+    font-weight: 700;
+    color: #EDE5E5;
+    margin-bottom: 13px;
+}
+
+.left-container .anti-aliasing-container .title span{
+    width: 180px;
+    border: 1px solid #fff;
+}
+
+.left-container .anti-aliasing-container .buttons{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-container .anti-aliasing-container .buttons button{
+    border: none;
+    width: 170px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.left-container .anti-aliasing-container .buttons button:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.left-container .anti-aliasing-container .buttons button.enable{
+    background: #52834B;
+}
+
+.left-container .anti-aliasing-container .buttons button.enable:hover{
+    background: #436e3d;
+}
+
+.left-container .anti-aliasing-container .buttons button.disable{
+    background: #D26666;
+}
+
+.left-container .anti-aliasing-container .buttons button.disable:hover{
+    background: #b85959;
+}
+
+.left-container .anti-aliasing-container .buttons button.low{
+    background: #938B44;
+}
+
+.left-container .anti-aliasing-container .buttons button.low:hover{
+    background: #7c7538;
+}
+
+.left-container .anti-aliasing-container .buttons button.high{
+    background: #C64ADA;
+}
+
+.left-container .anti-aliasing-container .buttons button.high:hover{
+    background: #b743c9;
+}
+
+/* End Anti Aliasing */
+
+/* Auto Settings */
+
+.left-container .auto-settings-container{
+    grid-row: 3/4;
+    grid-column: 1/3;
+    width: 435px;
+    height: 140px;
+    background-color: #353333;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+.left-container .auto-settings-container .title{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-container .auto-settings-container .title p{
+    font-size: 25px;
+    font-weight: 700;
+    color: #EDE5E5;
+    margin-bottom: 13px;
+}
+
+.left-container .auto-settings-container .title span{
+    width: 350px;
+    border: 1px solid #fff;
+}
+
+.left-container .auto-settings-container .buttons{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-container .auto-settings-container .buttons button{
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    width: 105px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.left-container .auto-settings-container .buttons button.performance{
+    background: #94A530;
+}
+
+.left-container .auto-settings-container .buttons button.performance:hover{
+    background: #82912e;
+}
+
+.left-container .auto-settings-container .buttons button.balanced{
+    background: #2F6E7C;
+}
+
+.left-container .auto-settings-container .buttons button.balanced:hover{
+    background: #245b68;
+}
+
+.left-container .auto-settings-container .buttons button.cinematic{
+    background: #AB213A;
+}
+
+.left-container .auto-settings-container .buttons button.cinematic:hover{
+    background: #8f1c31;
+}
+
+.left-container .auto-settings-container .buttons button:not(:last-child){
+    margin-right: 21px;
+}
+
+/* End Auto Settings */
+
+/* Graphic Settings */
+
+.right-container .graphic-settings-container{
+    width: 275px;
+    height: 540px;
+    background-color: #353333;
+    border-radius: 15px;
+}
+
+.right-container .graphic-settings-container .title{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-container .graphic-settings-container .title .text{
+    display: flex;
+    align-items: center;
+}
+
+.right-container .graphic-settings-container .title .text p{
+    font-size: 25px;
+    font-weight: 700;
+    color: #EDE5E5;
+    margin-bottom: 13px;
+}
+
+.right-container .graphic-settings-container .title .text img{
+    padding-bottom: 13px;
+    padding-left: 50px;
+    filter: invert(58%) sepia(0%) saturate(26%) hue-rotate(199deg) brightness(85%) contrast(74%);
+    cursor: pointer;
+}
+
+.right-container .graphic-settings-container .title span{
+    width: 230px;
+    border: 1px solid #fff;
+    margin-bottom: 19px;
+}
+
+.right-container .graphic-settings-container .items{
+    display: flex;
+    flex-direction: column;
+    padding: 0 22px;
+}
+
+.right-container .graphic-settings-container .items .item{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container .graphic-settings-container .items .item label{
+    margin-bottom: 6px;
+    color: #827E7E;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.right-container .graphic-settings-container .items .item input{
+    background: #595656;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.right-container .graphic-settings-container .items .item input::-webkit-outer-spin-button,
+.right-container .graphic-settings-container .items .item input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.right-container .graphic-settings-container .items .item input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.right-container .graphic-settings-container .items .item:not(:nth-child(6)) input{
+    margin-bottom: 15px;
+}
+
+.right-container .graphic-settings-container .items .item input:focus{
+    outline: none;
+}
+
+.right-container .graphic-settings-container .items .button{
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-container .graphic-settings-container .items .button button{
+    border: none;
+    background: #66AA3D;
+    border-radius: 15px;
+    width: 70px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #FFF6F6;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.right-container .graphic-settings-container .items .button button:hover{
+    background: #61963f;
+}
+/* End Graphic Settings */
+
+
