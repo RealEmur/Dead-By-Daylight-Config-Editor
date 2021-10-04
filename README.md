@@ -7,10 +7,10 @@ Dead By Daylight Config ayarlarını direkt olarak değiştirebilmenizi sağlar.
 
 **Appdata/Local/DeadByDaylight/SavednConfig/WindowsNoEditor** dizinindeki **GameUserSettings.ini** ve **Engine.ini** dosyaları düzenlenmektedir. 
 
-##**_Grafik Ayarları_:**
-###Görüş Mesafesi Kalitesi: GameUserSettings.ini **->** ViewDistanceQuality
-###Kenar Yumuşatma: GameUserSettings.ini **->** AntiAliasingQuality
-###Gölge Kalitesi: GameUserSettings.ini **->** ShadowQuality
-###Post Processing: GameUserSettings.ini **->** PostProcessQuality
-###Kaplama Kalitesi: GameUserSettings.ini **->** TextureQuality
-###Efekt Kalitesi: GameUserSettings.ini **->** EffectsQuality
+## Grafik Ayarları:
+### Görüş Mesafesi Kalitesi: GameUserSettings.ini **->** ViewDistanceQuality
+### Kenar Yumuşatma: GameUserSettings.ini **->** AntiAliasingQuality
+### Gölge Kalitesi: GameUserSettings.ini **->** ShadowQuality
+### Post Processing: GameUserSettings.ini **->** PostProcessQuality
+### Kaplama Kalitesi: GameUserSettings.ini **->** TextureQuality
+### Efekt Kalitesi: GameUserSettings.ini **->** EffectsQuality
