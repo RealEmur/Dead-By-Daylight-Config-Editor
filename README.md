@@ -9,7 +9,7 @@ Dead By Daylight Config ayarlarını direkt olarak değiştirebilmenizi sağlar.
 
 # İndirme
 
-Programı bilgisayarınıza kurun ve açın. Config dosyalarınız varsa ayarlarınızı değiştirmeye başlayabilirsiniz.
+Setup dosyasını bilgisayarınıza indirin ve açın. Kurulum işlemi birkaç dakika sürecektir. Uygulama **Appdata/Local/DeadByDaylight-Config** dizinine kurulacaktır. Kurulum sonrasında masaüstünde otomatik olarak bir kısayol oluşturulacaktır. Kurulum sonrası uygulamayı açıp config dosyalarınız varsa ayarlarınızı değiştirmeye başlayabilirsiniz.
 
 
 # Değiştirilen Dosyalar
