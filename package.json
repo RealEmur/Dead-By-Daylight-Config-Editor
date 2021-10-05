@@ -1,5 +1,6 @@
 {
   "name": "dbd-config-editor",
+  "productName": "Dead By Daylight Config Editor",
   "version": "1.0.0",
   "description": "Dead By Daylight Config Editor",
   "main": "main.js",
@@ -8,18 +9,53 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
-  "build": {
-    "productName": "Dead By Daylight Config Editor",
-    "win": {
-      "icon": "./build/icon.png"
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "productName": "Dead By Daylight Config Editor",
+        "icon": "icon.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "DeadByDaylight-Config-Editor",
+            "executableName": "Dead By Daylight Config Editor",
+            "setupIcon": "icon.ico",
+            "setupExe": "DBD Config Editor Installer.exe"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
+      "publishers": []
     }
   },
   "devDependencies": {
-    "electron": "^15.1.1",
-    "electron-builder": "^22.11.7"
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "electron": "^15.1.1"
+  },
+  "dependencies": {
+    "@electron-forge/maker-deb": "^6.0.0-beta.61",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.61",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
+    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "electron-squirrel-startup": "^1.0.0"
   }
 }
