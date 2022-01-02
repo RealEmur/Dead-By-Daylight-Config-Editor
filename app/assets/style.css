@@ -16,20 +16,15 @@ body{
     background-color: #2B2B2B;
 }
 
-.app{
-    width: 100%;
-    height: 100vh;
-    display: none;
-}
 
-.app .container{
+.container{
     width: 100%;
     height: calc(100% - 40px);
     display: flex;
     justify-content: space-between;
 }
 
-.app .left-container{
+.left-container{
     flex: 6;
     
     display: grid;
@@ -37,7 +32,7 @@ body{
     grid-template-columns: 50% 50%;
 }
 
-.app .right-container{
+.right-container{
     flex: 4;
     display: flex;
     align-items: center;
@@ -50,84 +45,10 @@ body{
 }
 /* End Static */
 
-#market-selection{
-    width: 100%;
-    height: 100vh;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-#market-selection h1{
-    color: rgb(228, 228, 228);
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    font-size: 32px;
-}
-
-#market-selection span{
-    color: rgb(212, 212, 212);
-    padding: 0 100px;
-    margin-bottom: 30px;
-    font-size: 16px;
-}
-
-#market-selection .buttons{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#market-selection button{
-    width: 150px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border: none;
-    color: white;
-    text-align: left;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    transition: 0.2s ease;
-}
-
-#market-selection button img{
-    margin-left: 20px;
-    margin-right: 15px;
-}
-
-#market-selection button:first-child{
-    margin-right: 30px;
-    background: #000000;
-}
-
-#market-selection button:first-child:hover{
-    background: #181818;
-}
-
-#market-selection button:last-child{
-    background: white;
-    color: #2f2d2e;
-    font-weight: 600;
-}
-
-#market-selection button:last-child:hover{
-    background: rgb(209, 209, 209);
-}
-
-#market-selection button:last-child img{
-    margin-left: 9px;
-    margin-right: 5px;
-}
-
-
 
 /* Reset Alert */
 
-.app .reset-alert{
+.reset-alert{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -145,12 +66,12 @@ body{
     align-items: center;
 }
 
-.app .reset-alert span{
+.reset-alert span{
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.app .reset-alert button{
+.reset-alert button{
     padding: 5px 10px;
     background: rgb(9, 88, 9);
     color: white;
@@ -160,21 +81,21 @@ body{
     cursor: pointer;
 }
 
-.app .reset-alert button:hover{
+.reset-alert button:hover{
     background: rgb(12, 107, 12);
 }
 
 /* End Reset Alert */
 
 /* Notifications */
-.app .notifications{
+.notifications{
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 999;
 }
 
-.app .notifications .notification{
+.notifications .notification{
     width: 400px;
     padding: 5px 10px;
     color: white;
@@ -185,34 +106,34 @@ body{
     justify-content: space-between;
 }
 
-.app .notifications .notification.success{
+.notifications .notification.success{
     background-color: rgb(23, 131, 28);
 }
 
-.app .notifications .notification.failed{
+.notifications .notification.failed{
     background-color: rgb(116, 7, 21);
 }
 
-.app .notifications .notification p{
+.notifications .notification p{
     font-size: 15px;
     font-weight: 300;
 }
 
-.app .notifications .notification span{
+.notifications .notification span{
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
     color: rgb(255, 255, 255);
 }
 
-.app .notifications .notification span:hover{
+.notifications .notification span:hover{
     color: rgb(194, 191, 191)
 }
 
 /* End Notifications */
 
 /* Footer */
-.app footer{
+footer{
     width: calc(100- 50px);
     height: 20px;
     padding: 10px 25px;
@@ -222,12 +143,12 @@ body{
     justify-content: space-between;
 }
 
-.app footer .section{
+footer .section{
     display: flex;
     align-items: center;
 }
 
-.app footer .section.reload img{
+footer .section.reload img{
     padding: 5px 10px;
     border-radius: 10px;
     height: 25px;
@@ -235,29 +156,29 @@ body{
     cursor: pointer;
 }
 
-.app footer .section a{
+footer .section a{
     text-decoration: none;
     color: inherit;
 }
 
-.app footer .section p{
+footer .section p{
     color: rgb(156, 152, 152);
     font-size: 15px;
 }
 
-.app footer .section .icons{
+footer .section .icons{
     padding-top: 7px;
     display: flex;
     align-items: center;
     margin-right: 5px;
 }
 
-.app footer .section .icons img{
+footer .section .icons img{
     height: 25px;
     cursor: pointer;
 }
 
-.app footer .section .icons img.twitch{
+footer .section .icons img.twitch{
     height: 20px;
 }
 
@@ -266,7 +187,7 @@ body{
 
 /* Fps Settings */
 
-.app .left-container .fps-settings-container{
+.left-container .fps-settings-container{
     grid-row: 1/2;
     grid-column: 1/3;
     width: 435px;
@@ -277,33 +198,33 @@ body{
     margin-top: 16px;
 }
 
-.app .left-container .fps-settings-container .title{
+.left-container .fps-settings-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.app .left-container .fps-settings-container .title p{
+.left-container .fps-settings-container .title p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.app .left-container .fps-settings-container .title span{
+.left-container .fps-settings-container .title span{
     width: 350px;
     border: 1px solid #fff;
 }
 
-.app .left-container .fps-settings-container .buttons{
+.left-container .fps-settings-container .buttons{
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.app .left-container .fps-settings-container .buttons button{
+.left-container .fps-settings-container .buttons button{
     background: #474545;
     border: none;
     border-radius: 10px;
@@ -315,18 +236,18 @@ body{
     transition: 0.2s ease;
 }
 
-.app .left-container .fps-settings-container .buttons button:hover{
+.left-container .fps-settings-container .buttons button:hover{
     background: #333232;
 }
 
-.app .left-container .fps-settings-container .buttons button:first-child{
+.left-container .fps-settings-container .buttons button:first-child{
     margin-right: 25px;
 }
 
 /* End Fps Settings */
 
 /* 3D Resolution */
-.app .left-container .resolution-container{
+.left-container .resolution-container{
     grid-row: 2/3;
     grid-column: 1/2;
     background: #353333;
@@ -337,27 +258,27 @@ body{
     margin-left: 20px;
 }
 
-.app .left-container .resolution-container .title{
+.left-container .resolution-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.app .left-container .resolution-container .title p{
+.left-container .resolution-container .title p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.app .left-container .resolution-container .title span{
+.left-container .resolution-container .title span{
     width: 180px;
     border: 1px solid #fff;
     margin-bottom: 19px;
 }
 
-.app .left-container .resolution-container .input{
+.left-container .resolution-container .input{
     margin-top: 20px;
     display: flex;
     padding: 0 25px;
@@ -365,7 +286,7 @@ body{
     justify-content: center;
 }
 
-.app .left-container .resolution-container .input p{
+.left-container .resolution-container .input p{
     font-size: 30px;
     color: white;
     font-weight: 700;
@@ -373,24 +294,24 @@ body{
     text-align: center;
 }
 
-.app .left-container .resolution-container .input img.arrow{
+.left-container .resolution-container .input img.arrow{
     width: 30px;
     filter: invert(58%) sepia(0%) saturate(26%) hue-rotate(199deg) brightness(85%) contrast(74%);
     cursor: pointer;
 }
 
-.app .left-container .resolution-container .input img.arrow:last-child{
+.left-container .resolution-container .input img.arrow:last-child{
     transform: rotate(180deg);
 }
 
-.app .left-container .resolution-container .button{
+.left-container .resolution-container .button{
     margin-top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.app .left-container .resolution-container .button button{
+.left-container .resolution-container .button button{
     border: none;
     background: #66AA3D;
     border-radius: 15px;
@@ -403,14 +324,14 @@ body{
     transition: 0.2s ease;
 }
 
-.app .left-container .resolution-container .button button:hover{
+.left-container .resolution-container .button button:hover{
     background: #61963f;
 }
 
 /* End 3D Resolution */
 
 /* Anti Aliasing */
-.app .left-container .anti-aliasing-container{
+.left-container .anti-aliasing-container{
     grid-row: 2/3;
     grid-column: 2/3;
     background: #353333;
@@ -421,33 +342,33 @@ body{
     margin-right: 18px;
 }
 
-.app .left-container .anti-aliasing-container .title{
+.left-container .anti-aliasing-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.app .left-container .anti-aliasing-container .title p{
+.left-container .anti-aliasing-container .title p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.app .left-container .anti-aliasing-container .title span{
+.left-container .anti-aliasing-container .title span{
     width: 180px;
     border: 1px solid #fff;
 }
 
-.app .left-container .anti-aliasing-container .buttons{
+.left-container .anti-aliasing-container .buttons{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.app .left-container .anti-aliasing-container .buttons button{
+.left-container .anti-aliasing-container .buttons button{
     border: none;
     width: 170px;
     height: 30px;
@@ -459,39 +380,39 @@ body{
     border-radius: 10px;
 }
 
-.app .left-container .anti-aliasing-container .buttons button:not(:last-child){
+.left-container .anti-aliasing-container .buttons button:not(:last-child){
     margin-bottom: 10px;
 }
 
-.app .left-container .anti-aliasing-container .buttons button.enable{
+.left-container .anti-aliasing-container .buttons button.enable{
     background: #52834B;
 }
 
-.app .left-container .anti-aliasing-container .buttons button.enable:hover{
+.left-container .anti-aliasing-container .buttons button.enable:hover{
     background: #436e3d;
 }
 
-.app .left-container .anti-aliasing-container .buttons button.disable{
+.left-container .anti-aliasing-container .buttons button.disable{
     background: #D26666;
 }
 
-.app .left-container .anti-aliasing-container .buttons button.disable:hover{
+.left-container .anti-aliasing-container .buttons button.disable:hover{
     background: #b85959;
 }
 
-.app .left-container .anti-aliasing-container .buttons button.low{
+.left-container .anti-aliasing-container .buttons button.low{
     background: #938B44;
 }
 
-.app .left-container .anti-aliasing-container .buttons button.low:hover{
+.left-container .anti-aliasing-container .buttons button.low:hover{
     background: #7c7538;
 }
 
-.app .left-container .anti-aliasing-container .buttons button.high{
+.left-container .anti-aliasing-container .buttons button.high{
     background: #C64ADA;
 }
 
-.app .left-container .anti-aliasing-container .buttons button.high:hover{
+.left-container .anti-aliasing-container .buttons button.high:hover{
     background: #b743c9;
 }
 
@@ -499,7 +420,7 @@ body{
 
 /* Auto Settings */
 
-.app .left-container .auto-settings-container{
+.left-container .auto-settings-container{
     grid-row: 3/4;
     grid-column: 1/3;
     width: 435px;
@@ -510,33 +431,33 @@ body{
     margin-bottom: 16px;
 }
 
-.app .left-container .auto-settings-container .title{
+.left-container .auto-settings-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.app .left-container .auto-settings-container .title p{
+.left-container .auto-settings-container .title p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.app .left-container .auto-settings-container .title span{
+.left-container .auto-settings-container .title span{
     width: 350px;
     border: 1px solid #fff;
 }
 
-.app .left-container .auto-settings-container .buttons{
+.left-container .auto-settings-container .buttons{
     margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.app .left-container .auto-settings-container .buttons button{
+.left-container .auto-settings-container .buttons button{
     border: none;
     border-radius: 10px;
     color: white;
@@ -547,31 +468,31 @@ body{
     transition: 0.2s ease;
 }
 
-.app .left-container .auto-settings-container .buttons button.performance{
+.left-container .auto-settings-container .buttons button.performance{
     background: #94A530;
 }
 
-.app .left-container .auto-settings-container .buttons button.performance:hover{
+.left-container .auto-settings-container .buttons button.performance:hover{
     background: #82912e;
 }
 
-.app .left-container .auto-settings-container .buttons button.balanced{
+.left-container .auto-settings-container .buttons button.balanced{
     background: #2F6E7C;
 }
 
-.app .left-container .auto-settings-container .buttons button.balanced:hover{
+.left-container .auto-settings-container .buttons button.balanced:hover{
     background: #245b68;
 }
 
-.app .left-container .auto-settings-container .buttons button.cinematic{
+.left-container .auto-settings-container .buttons button.cinematic{
     background: #AB213A;
 }
 
-.app .left-container .auto-settings-container .buttons button.cinematic:hover{
+.left-container .auto-settings-container .buttons button.cinematic:hover{
     background: #8f1c31;
 }
 
-.app .left-container .auto-settings-container .buttons button:not(:last-child){
+.left-container .auto-settings-container .buttons button:not(:last-child){
     margin-right: 21px;
 }
 
@@ -579,64 +500,64 @@ body{
 
 /* Graphic Settings */
 
-.app .right-container .graphic-settings-container{
+.right-container .graphic-settings-container{
     width: 275px;
     height: 540px;
     background-color: #353333;
     border-radius: 15px;
 }
 
-.app .right-container .graphic-settings-container .title{
+.right-container .graphic-settings-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.app .right-container .graphic-settings-container .title .text{
+.right-container .graphic-settings-container .title .text{
     display: flex;
     align-items: center;
 }
 
-.app .right-container .graphic-settings-container .title .text p{
+.right-container .graphic-settings-container .title .text p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.app .right-container .graphic-settings-container .title .text img{
+.right-container .graphic-settings-container .title .text img{
     padding-bottom: 13px;
     padding-left: 50px;
     filter: invert(58%) sepia(0%) saturate(26%) hue-rotate(199deg) brightness(85%) contrast(74%);
     cursor: pointer;
 }
 
-.app .right-container .graphic-settings-container .title span{
+.right-container .graphic-settings-container .title span{
     width: 230px;
     border: 1px solid #fff;
     margin-bottom: 19px;
 }
 
-.app .right-container .graphic-settings-container .items{
+.right-container .graphic-settings-container .items{
     display: flex;
     flex-direction: column;
     padding: 0 22px;
 }
 
-.app .right-container .graphic-settings-container .items .item{
+.right-container .graphic-settings-container .items .item{
     display: flex;
     flex-direction: column;
 }
 
-.app .right-container .graphic-settings-container .items .item label{
+.right-container .graphic-settings-container .items .item label{
     margin-bottom: 6px;
     color: #827E7E;
     font-weight: 700;
     font-size: 15px;
 }
 
-.app .right-container .graphic-settings-container .items .item input{
+.right-container .graphic-settings-container .items .item input{
     background: #595656;
     border: none;
     height: 30px;
@@ -646,32 +567,32 @@ body{
 }
 
 /* Chrome, Safari, Edge, Opera */
-.app .right-container .graphic-settings-container .items .item input::-webkit-outer-spin-button,
-.app .right-container .graphic-settings-container .items .item input::-webkit-inner-spin-button {
+.right-container .graphic-settings-container .items .item input::-webkit-outer-spin-button,
+.right-container .graphic-settings-container .items .item input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-.app .right-container .graphic-settings-container .items .item input[type=number] {
+.right-container .graphic-settings-container .items .item input[type=number] {
   -moz-appearance: textfield;
 }
 
-.app .right-container .graphic-settings-container .items .item:not(:nth-child(6)) input{
+.right-container .graphic-settings-container .items .item:not(:nth-child(6)) input{
     margin-bottom: 15px;
 }
 
-.app .right-container .graphic-settings-container .items .item input:focus{
+.right-container .graphic-settings-container .items .item input:focus{
     outline: none;
 }
 
-.app .right-container .graphic-settings-container .items .button{
+.right-container .graphic-settings-container .items .button{
     margin-top: 15px;
     display: flex;
     justify-content: flex-end;
 }
 
-.app .right-container .graphic-settings-container .items .button button{
+.right-container .graphic-settings-container .items .button button{
     border: none;
     background: #66AA3D;
     border-radius: 15px;
@@ -684,7 +605,7 @@ body{
     transition: 0.2s ease;
 }
 
-.app .right-container .graphic-settings-container .items .button button:hover{
+.right-container .graphic-settings-container .items .button button:hover{
     background: #61963f;
 }
 /* End Graphic Settings */

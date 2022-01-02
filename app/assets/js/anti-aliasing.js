@@ -3,12 +3,25 @@ const antiAliasingDisable = window.document.getElementById("anti-aliasing-disabl
 const antiAliasingLow = window.document.getElementById("anti-aliasing-low");
 const antiAliasingHigh = window.document.getElementById("anti-aliasing-high");
 
+
+if(Functions.GetValue(EngineFilePath, "r.DefaultFeature.AntiAliasing") === -1){
+    if(antiAliasingDisable)
+        antiAliasingDisable.style.display = "none";
+    if(antiAliasingLow)
+        antiAliasingLow.style.display = "none";
+    if(antiAliasingHigh)
+        antiAliasingHigh.style.display = "none";
+}else{
+    if(antiAliasingEnable)
+        antiAliasingEnable.style.display = "none";
+}
+
 if(antiAliasingEnable){
     antiAliasingEnable.addEventListener("click", () =>{
         try{
-            const file = fs.readFileSync(Functions.GetFilePath("engine")).toString();
+            const file = fs.readFileSync(EngineFilePath).toString();
             const newFile = file+"\n\n[/script/engine.GarbageCollectionSettings]\nr.DefaultFeature.AntiAliasing=0";
-            fs.writeFileSync(Functions.GetFilePath("engine"), newFile);
+            fs.writeFileSync(EngineFilePath, newFile);
 
             antiAliasingEnable.style.display = "none";
             if(antiAliasingDisable)
@@ -26,9 +39,9 @@ if(antiAliasingEnable){
 if(antiAliasingDisable){
     antiAliasingDisable.addEventListener("click", () =>{
         try{
-            const file = fs.readFileSync(Functions.GetFilePath("engine")).toString();
-            const newFile = file.replace("[/script/engine.GarbageCollectionSettings]", "").replace("r.DefaultFeature.AntiAliasing="+Functions.GetValue(Functions.GetFilePath("engine"), "r.DefaultFeature.AntiAliasing"), "");
-            fs.writeFileSync(Functions.GetFilePath("engine"), newFile);
+            const file = fs.readFileSync(EngineFilePath).toString();
+            const newFile = file.replace("[/script/engine.GarbageCollectionSettings]", "").replace("r.DefaultFeature.AntiAliasing="+Functions.GetValue(EngineFilePath, "r.DefaultFeature.AntiAliasing"), "");
+            fs.writeFileSync(EngineFilePath, newFile);
 
             antiAliasingDisable.style.display = "none";
             if(antiAliasingEnable)
@@ -45,13 +58,13 @@ if(antiAliasingDisable){
 
 if(antiAliasingLow){
     antiAliasingLow.addEventListener("click", () => {
-        Functions.UpdateSetting(Functions.GetFilePath("engine"), "r.DefaultFeature.AntiAliasing", "1");
+        Functions.UpdateSetting(EngineFilePath, "r.DefaultFeature.AntiAliasing", "1");
     });
 }
 
 if(antiAliasingHigh){
     antiAliasingHigh.addEventListener("click", () => {
-        Functions.UpdateSetting(Functions.GetFilePath("engine"), "r.DefaultFeature.AntiAliasing", "2");
+        Functions.UpdateSetting(EngineFilePath, "r.DefaultFeature.AntiAliasing", "2");
     });
 }
 

@@ -12,6 +12,7 @@ const getCurrentValue = () =>{
 const set3dResolution = (textInput) =>{
     text.innerText = textInput;
 }
+set3dResolution(Functions.GetValue(ConfigFilePath, "ScreenResolution"));
 
 
 if(lowerArrow && higherArrow && text){
@@ -57,7 +58,7 @@ else
 if(resolutionSubmitButton){
     resolutionSubmitButton.addEventListener("click", () =>{
         let success = true;
-        if(!Functions.UpdateSetting(Functions.GetFilePath("game"), "ScreenResolution", getCurrentValue())) success = false;
+        if(!Functions.UpdateSetting(ConfigFilePath, "ScreenResolution", getCurrentValue())) success = false;
         sendNotification(success, success ? "3D Resolution değiştirme başarılı!" : "3D Resolution değiştirilirken bir hata oluştu.");
     });
 }

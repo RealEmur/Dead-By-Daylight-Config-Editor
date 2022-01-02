@@ -11,10 +11,11 @@ function GetGraphicValues(){
     Settings.map((Setting) => {
         const object = window.document.getElementById("graphic-settings-"+Setting.Id);
         if(object)
-            object.value = Functions.GetValue(Functions.GetFilePath("game"),Setting.Setting);
+            object.value = Functions.GetValue(ConfigFilePath,Setting.Setting);
     });
 }
 
+GetGraphicValues();
 
 const GraphicSubmitButton = window.document.getElementById("graphic-settings-submit");
 if(GraphicSubmitButton){
@@ -27,7 +28,7 @@ if(GraphicSubmitButton){
                 if(value > 5 || value < 0){
                     return;
                 }
-                const currentSuccess = Functions.UpdateSetting(Functions.GetFilePath("game"), Setting.Setting, object.value);
+                const currentSuccess = Functions.UpdateSetting(ConfigFilePath, Setting.Setting, object.value);
                 if(success)
                     success = currentSuccess;
             }
