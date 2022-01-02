@@ -12,8 +12,8 @@ if(reloadButton){
 if(reloadSettings){
     reloadSettings.addEventListener("click", ()=>{
         try{
-            fs.unlinkSync(ConfigFilePath);
-            fs.unlinkSync(EngineFilePath);
+            fs.unlinkSync(Functions.GetFilePath("game"));
+            fs.unlinkSync(Functions.GetFilePath("engine"));
             reloadAlert.style.display = "flex";
         }catch(err){
             sendNotification(false, "Config sıfırlanırken bir hata oluştu.");

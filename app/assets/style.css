@@ -16,15 +16,20 @@ body{
     background-color: #2B2B2B;
 }
 
+.app{
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
 
-.container{
+.app .container{
     width: 100%;
     height: calc(100% - 40px);
     display: flex;
     justify-content: space-between;
 }
 
-.left-container{
+.app .left-container{
     flex: 6;
     
     display: grid;
@@ -32,7 +37,7 @@ body{
     grid-template-columns: 50% 50%;
 }
 
-.right-container{
+.app .right-container{
     flex: 4;
     display: flex;
     align-items: center;
@@ -45,10 +50,84 @@ body{
 }
 /* End Static */
 
+#market-selection{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#market-selection h1{
+    color: rgb(228, 228, 228);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+#market-selection span{
+    color: rgb(212, 212, 212);
+    padding: 0 100px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+#market-selection .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#market-selection button{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: 0.2s ease;
+}
+
+#market-selection button img{
+    margin-left: 20px;
+    margin-right: 15px;
+}
+
+#market-selection button:first-child{
+    margin-right: 30px;
+    background: #000000;
+}
+
+#market-selection button:first-child:hover{
+    background: #181818;
+}
+
+#market-selection button:last-child{
+    background: white;
+    color: #2f2d2e;
+    font-weight: 600;
+}
+
+#market-selection button:last-child:hover{
+    background: rgb(209, 209, 209);
+}
+
+#market-selection button:last-child img{
+    margin-left: 9px;
+    margin-right: 5px;
+}
+
+
 
 /* Reset Alert */
 
-.reset-alert{
+.app .reset-alert{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,12 +145,12 @@ body{
     align-items: center;
 }
 
-.reset-alert span{
+.app .reset-alert span{
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.reset-alert button{
+.app .reset-alert button{
     padding: 5px 10px;
     background: rgb(9, 88, 9);
     color: white;
@@ -81,21 +160,21 @@ body{
     cursor: pointer;
 }
 
-.reset-alert button:hover{
+.app .reset-alert button:hover{
     background: rgb(12, 107, 12);
 }
 
 /* End Reset Alert */
 
 /* Notifications */
-.notifications{
+.app .notifications{
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 999;
 }
 
-.notifications .notification{
+.app .notifications .notification{
     width: 400px;
     padding: 5px 10px;
     color: white;
@@ -106,34 +185,34 @@ body{
     justify-content: space-between;
 }
 
-.notifications .notification.success{
+.app .notifications .notification.success{
     background-color: rgb(23, 131, 28);
 }
 
-.notifications .notification.failed{
+.app .notifications .notification.failed{
     background-color: rgb(116, 7, 21);
 }
 
-.notifications .notification p{
+.app .notifications .notification p{
     font-size: 15px;
     font-weight: 300;
 }
 
-.notifications .notification span{
+.app .notifications .notification span{
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
     color: rgb(255, 255, 255);
 }
 
-.notifications .notification span:hover{
+.app .notifications .notification span:hover{
     color: rgb(194, 191, 191)
 }
 
 /* End Notifications */
 
 /* Footer */
-footer{
+.app footer{
     width: calc(100- 50px);
     height: 20px;
     padding: 10px 25px;
@@ -143,12 +222,12 @@ footer{
     justify-content: space-between;
 }
 
-footer .section{
+.app footer .section{
     display: flex;
     align-items: center;
 }
 
-footer .section.reload img{
+.app footer .section.reload img{
     padding: 5px 10px;
     border-radius: 10px;
     height: 25px;
@@ -156,29 +235,29 @@ footer .section.reload img{
     cursor: pointer;
 }
 
-footer .section a{
+.app footer .section a{
     text-decoration: none;
     color: inherit;
 }
 
-footer .section p{
+.app footer .section p{
     color: rgb(156, 152, 152);
     font-size: 15px;
 }
 
-footer .section .icons{
+.app footer .section .icons{
     padding-top: 7px;
     display: flex;
     align-items: center;
     margin-right: 5px;
 }
 
-footer .section .icons img{
+.app footer .section .icons img{
     height: 25px;
     cursor: pointer;
 }
 
-footer .section .icons img.twitch{
+.app footer .section .icons img.twitch{
     height: 20px;
 }
 
@@ -187,7 +266,7 @@ footer .section .icons img.twitch{
 
 /* Fps Settings */
 
-.left-container .fps-settings-container{
+.app .left-container .fps-settings-container{
     grid-row: 1/2;
     grid-column: 1/3;
     width: 435px;
@@ -198,33 +277,33 @@ footer .section .icons img.twitch{
     margin-top: 16px;
 }
 
-.left-container .fps-settings-container .title{
+.app .left-container .fps-settings-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.left-container .fps-settings-container .title p{
+.app .left-container .fps-settings-container .title p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.left-container .fps-settings-container .title span{
+.app .left-container .fps-settings-container .title span{
     width: 350px;
     border: 1px solid #fff;
 }
 
-.left-container .fps-settings-container .buttons{
+.app .left-container .fps-settings-container .buttons{
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.left-container .fps-settings-container .buttons button{
+.app .left-container .fps-settings-container .buttons button{
     background: #474545;
     border: none;
     border-radius: 10px;
@@ -236,18 +315,18 @@ footer .section .icons img.twitch{
     transition: 0.2s ease;
 }
 
-.left-container .fps-settings-container .buttons button:hover{
+.app .left-container .fps-settings-container .buttons button:hover{
     background: #333232;
 }
 
-.left-container .fps-settings-container .buttons button:first-child{
+.app .left-container .fps-settings-container .buttons button:first-child{
     margin-right: 25px;
 }
 
 /* End Fps Settings */
 
 /* 3D Resolution */
-.left-container .resolution-container{
+.app .left-container .resolution-container{
     grid-row: 2/3;
     grid-column: 1/2;
     background: #353333;
@@ -258,27 +337,27 @@ footer .section .icons img.twitch{
     margin-left: 20px;
 }
 
-.left-container .resolution-container .title{
+.app .left-container .resolution-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.left-container .resolution-container .title p{
+.app .left-container .resolution-container .title p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.left-container .resolution-container .title span{
+.app .left-container .resolution-container .title span{
     width: 180px;
     border: 1px solid #fff;
     margin-bottom: 19px;
 }
 
-.left-container .resolution-container .input{
+.app .left-container .resolution-container .input{
     margin-top: 20px;
     display: flex;
     padding: 0 25px;
@@ -286,7 +365,7 @@ footer .section .icons img.twitch{
     justify-content: center;
 }
 
-.left-container .resolution-container .input p{
+.app .left-container .resolution-container .input p{
     font-size: 30px;
     color: white;
     font-weight: 700;
@@ -294,24 +373,24 @@ footer .section .icons img.twitch{
     text-align: center;
 }
 
-.left-container .resolution-container .input img.arrow{
+.app .left-container .resolution-container .input img.arrow{
     width: 30px;
     filter: invert(58%) sepia(0%) saturate(26%) hue-rotate(199deg) brightness(85%) contrast(74%);
     cursor: pointer;
 }
 
-.left-container .resolution-container .input img.arrow:last-child{
+.app .left-container .resolution-container .input img.arrow:last-child{
     transform: rotate(180deg);
 }
 
-.left-container .resolution-container .button{
+.app .left-container .resolution-container .button{
     margin-top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.left-container .resolution-container .button button{
+.app .left-container .resolution-container .button button{
     border: none;
     background: #66AA3D;
     border-radius: 15px;
@@ -324,14 +403,14 @@ footer .section .icons img.twitch{
     transition: 0.2s ease;
 }
 
-.left-container .resolution-container .button button:hover{
+.app .left-container .resolution-container .button button:hover{
     background: #61963f;
 }
 
 /* End 3D Resolution */
 
 /* Anti Aliasing */
-.left-container .anti-aliasing-container{
+.app .left-container .anti-aliasing-container{
     grid-row: 2/3;
     grid-column: 2/3;
     background: #353333;
@@ -342,33 +421,33 @@ footer .section .icons img.twitch{
     margin-right: 18px;
 }
 
-.left-container .anti-aliasing-container .title{
+.app .left-container .anti-aliasing-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.left-container .anti-aliasing-container .title p{
+.app .left-container .anti-aliasing-container .title p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.left-container .anti-aliasing-container .title span{
+.app .left-container .anti-aliasing-container .title span{
     width: 180px;
     border: 1px solid #fff;
 }
 
-.left-container .anti-aliasing-container .buttons{
+.app .left-container .anti-aliasing-container .buttons{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.left-container .anti-aliasing-container .buttons button{
+.app .left-container .anti-aliasing-container .buttons button{
     border: none;
     width: 170px;
     height: 30px;
@@ -380,39 +459,39 @@ footer .section .icons img.twitch{
     border-radius: 10px;
 }
 
-.left-container .anti-aliasing-container .buttons button:not(:last-child){
+.app .left-container .anti-aliasing-container .buttons button:not(:last-child){
     margin-bottom: 10px;
 }
 
-.left-container .anti-aliasing-container .buttons button.enable{
+.app .left-container .anti-aliasing-container .buttons button.enable{
     background: #52834B;
 }
 
-.left-container .anti-aliasing-container .buttons button.enable:hover{
+.app .left-container .anti-aliasing-container .buttons button.enable:hover{
     background: #436e3d;
 }
 
-.left-container .anti-aliasing-container .buttons button.disable{
+.app .left-container .anti-aliasing-container .buttons button.disable{
     background: #D26666;
 }
 
-.left-container .anti-aliasing-container .buttons button.disable:hover{
+.app .left-container .anti-aliasing-container .buttons button.disable:hover{
     background: #b85959;
 }
 
-.left-container .anti-aliasing-container .buttons button.low{
+.app .left-container .anti-aliasing-container .buttons button.low{
     background: #938B44;
 }
 
-.left-container .anti-aliasing-container .buttons button.low:hover{
+.app .left-container .anti-aliasing-container .buttons button.low:hover{
     background: #7c7538;
 }
 
-.left-container .anti-aliasing-container .buttons button.high{
+.app .left-container .anti-aliasing-container .buttons button.high{
     background: #C64ADA;
 }
 
-.left-container .anti-aliasing-container .buttons button.high:hover{
+.app .left-container .anti-aliasing-container .buttons button.high:hover{
     background: #b743c9;
 }
 
@@ -420,7 +499,7 @@ footer .section .icons img.twitch{
 
 /* Auto Settings */
 
-.left-container .auto-settings-container{
+.app .left-container .auto-settings-container{
     grid-row: 3/4;
     grid-column: 1/3;
     width: 435px;
@@ -431,33 +510,33 @@ footer .section .icons img.twitch{
     margin-bottom: 16px;
 }
 
-.left-container .auto-settings-container .title{
+.app .left-container .auto-settings-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.left-container .auto-settings-container .title p{
+.app .left-container .auto-settings-container .title p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.left-container .auto-settings-container .title span{
+.app .left-container .auto-settings-container .title span{
     width: 350px;
     border: 1px solid #fff;
 }
 
-.left-container .auto-settings-container .buttons{
+.app .left-container .auto-settings-container .buttons{
     margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.left-container .auto-settings-container .buttons button{
+.app .left-container .auto-settings-container .buttons button{
     border: none;
     border-radius: 10px;
     color: white;
@@ -468,31 +547,31 @@ footer .section .icons img.twitch{
     transition: 0.2s ease;
 }
 
-.left-container .auto-settings-container .buttons button.performance{
+.app .left-container .auto-settings-container .buttons button.performance{
     background: #94A530;
 }
 
-.left-container .auto-settings-container .buttons button.performance:hover{
+.app .left-container .auto-settings-container .buttons button.performance:hover{
     background: #82912e;
 }
 
-.left-container .auto-settings-container .buttons button.balanced{
+.app .left-container .auto-settings-container .buttons button.balanced{
     background: #2F6E7C;
 }
 
-.left-container .auto-settings-container .buttons button.balanced:hover{
+.app .left-container .auto-settings-container .buttons button.balanced:hover{
     background: #245b68;
 }
 
-.left-container .auto-settings-container .buttons button.cinematic{
+.app .left-container .auto-settings-container .buttons button.cinematic{
     background: #AB213A;
 }
 
-.left-container .auto-settings-container .buttons button.cinematic:hover{
+.app .left-container .auto-settings-container .buttons button.cinematic:hover{
     background: #8f1c31;
 }
 
-.left-container .auto-settings-container .buttons button:not(:last-child){
+.app .left-container .auto-settings-container .buttons button:not(:last-child){
     margin-right: 21px;
 }
 
@@ -500,64 +579,64 @@ footer .section .icons img.twitch{
 
 /* Graphic Settings */
 
-.right-container .graphic-settings-container{
+.app .right-container .graphic-settings-container{
     width: 275px;
     height: 540px;
     background-color: #353333;
     border-radius: 15px;
 }
 
-.right-container .graphic-settings-container .title{
+.app .right-container .graphic-settings-container .title{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.right-container .graphic-settings-container .title .text{
+.app .right-container .graphic-settings-container .title .text{
     display: flex;
     align-items: center;
 }
 
-.right-container .graphic-settings-container .title .text p{
+.app .right-container .graphic-settings-container .title .text p{
     font-size: 25px;
     font-weight: 700;
     color: #EDE5E5;
     margin-bottom: 13px;
 }
 
-.right-container .graphic-settings-container .title .text img{
+.app .right-container .graphic-settings-container .title .text img{
     padding-bottom: 13px;
     padding-left: 50px;
     filter: invert(58%) sepia(0%) saturate(26%) hue-rotate(199deg) brightness(85%) contrast(74%);
     cursor: pointer;
 }
 
-.right-container .graphic-settings-container .title span{
+.app .right-container .graphic-settings-container .title span{
     width: 230px;
     border: 1px solid #fff;
     margin-bottom: 19px;
 }
 
-.right-container .graphic-settings-container .items{
+.app .right-container .graphic-settings-container .items{
     display: flex;
     flex-direction: column;
     padding: 0 22px;
 }
 
-.right-container .graphic-settings-container .items .item{
+.app .right-container .graphic-settings-container .items .item{
     display: flex;
     flex-direction: column;
 }
 
-.right-container .graphic-settings-container .items .item label{
+.app .right-container .graphic-settings-container .items .item label{
     margin-bottom: 6px;
     color: #827E7E;
     font-weight: 700;
     font-size: 15px;
 }
 
-.right-container .graphic-settings-container .items .item input{
+.app .right-container .graphic-settings-container .items .item input{
     background: #595656;
     border: none;
     height: 30px;
@@ -567,32 +646,32 @@ footer .section .icons img.twitch{
 }
 
 /* Chrome, Safari, Edge, Opera */
-.right-container .graphic-settings-container .items .item input::-webkit-outer-spin-button,
-.right-container .graphic-settings-container .items .item input::-webkit-inner-spin-button {
+.app .right-container .graphic-settings-container .items .item input::-webkit-outer-spin-button,
+.app .right-container .graphic-settings-container .items .item input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-.right-container .graphic-settings-container .items .item input[type=number] {
+.app .right-container .graphic-settings-container .items .item input[type=number] {
   -moz-appearance: textfield;
 }
 
-.right-container .graphic-settings-container .items .item:not(:nth-child(6)) input{
+.app .right-container .graphic-settings-container .items .item:not(:nth-child(6)) input{
     margin-bottom: 15px;
 }
 
-.right-container .graphic-settings-container .items .item input:focus{
+.app .right-container .graphic-settings-container .items .item input:focus{
     outline: none;
 }
 
-.right-container .graphic-settings-container .items .button{
+.app .right-container .graphic-settings-container .items .button{
     margin-top: 15px;
     display: flex;
     justify-content: flex-end;
 }
 
-.right-container .graphic-settings-container .items .button button{
+.app .right-container .graphic-settings-container .items .button button{
     border: none;
     background: #66AA3D;
     border-radius: 15px;
@@ -605,7 +684,7 @@ footer .section .icons img.twitch{
     transition: 0.2s ease;
 }
 
-.right-container .graphic-settings-container .items .button button:hover{
+.app .right-container .graphic-settings-container .items .button button:hover{
     background: #61963f;
 }
 /* End Graphic Settings */

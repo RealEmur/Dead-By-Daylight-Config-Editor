@@ -9,116 +9,126 @@
     <link rel="stylesheet" href="assets/style.css">
   </head>
   <body>
-    <div class="notifications">
-    </div>
-    <div id="reset-alert" class="reset-alert shadow">
-        <h1>UYARI!</h1>
-        <span>Ayar dosyalarınız silindi. Yeniden oluşması için oyunu açmanız gerekmektedir.</span>
-        <button id="reset-alert-button">Anladım!</button>
-    </div>
-    <div class="container">
-        <div class="left-container">
-            <div class="fps-settings-container shadow">
-                <div class="title">
-                    <p>FPS Ayarları</p>
-                    <span></span>
-                </div>
-                <div class="buttons">
-                    <button id="fps-settings-120" class="shadow">120 FPS</button>
-                    <button id="fps-settings-infinite" class="shadow">Sınırsız FPS</button>
-                </div>
-            </div>
-            <div class="resolution-container shadow">
-                <div class="title">
-                    <p>3D Resolution</p>
-                    <span></span>
-                </div>
-                <div class="input">
-                    <img id="3d-resolution-lower-arrow" src="assets/svgs/arrow.svg" class="arrow">
-                    <p><span id="3d-resolution-text">10</span>%</p>
-                    <img id="3d-resolution-higher-arrow" src="assets/svgs/arrow.svg" class="arrow">
-                </div>
-                <div class="button">
-                    <button id="3d-resolution-button" class="shadow">Kaydet</button>
-                </div>
-            </div>
-            <div class="anti-aliasing-container shadow">
-                <div class="title">
-                    <p>Anti Aliasing</p>
-                    <span></span>
-                </div>
-                <div class="buttons">
-                    <button id="anti-aliasing-enable" class="enable shadow">Etkinleştir</button>
-                    <button id="anti-aliasing-disable" class="disable shadow">Devre Dışı Bırak</button>
-                    <button id="anti-aliasing-low" class="low shadow">Düşük</button>
-                    <button id="anti-aliasing-high" class="high shadow">Yüksek</button>
-                </div>
-            </div>
-            <div class="auto-settings-container shadow">
-                <div class="title">
-                    <p>Otomatik Ayarlar</p>
-                    <span></span>
-                </div>
-                <div class="buttons">
-                    <button id="auto-settings-performance" class="performance shadow">Peformans</button>
-                    <button id="auto-settings-balanced" class="balanced shadow">Dengeli</button>
-                    <button id="auto-settings-cinematic" class="cinematic shadow">Grafik</button>
-                </div>
-            </div>
+    <div id="market-selection">
+        <h1>MARKET SEÇİMİ</h1>
+        <span>Lütfen Dead By Daylight'ı edindiğiniz marketi seçiniz. Bu seçimi uygulamayı her başlattığınızda yapabileceksiniz.</span>
+        <div class="buttons">
+            <button id="select-steam"><img src="assets/svgs/steam.svg" width="25px"/>Steam</button>
+            <button id="select-epic"><img src="assets/svgs/epic-games.svg" width="45px"/>Epic Games</button>
         </div>
-        <div class="right-container">
-            <div class="graphic-settings-container shadow">
-                <div class="title">
-                    <div class="text"><p>Grafik Ayarları</p><img src="assets/svgs/questionmark.svg" title="Bütün değerler 0 ile 5 arasında olmak zorundadır." height="20px" alt=""></div>
-                    <span></span>
+    </div>
+    <div id="app" class="app">
+        <div class="notifications">
+        </div>
+        <div id="reset-alert" class="reset-alert shadow">
+            <h1>UYARI!</h1>
+            <span>Ayar dosyalarınız silindi. Yeniden oluşması için oyunu açmanız gerekmektedir.</span>
+            <button id="reset-alert-button">Anladım!</button>
+        </div>
+        <div class="container">
+            <div class="left-container">
+                <div class="fps-settings-container shadow">
+                    <div class="title">
+                        <p>FPS Ayarları</p>
+                        <span></span>
+                    </div>
+                    <div class="buttons">
+                        <button id="fps-settings-120" class="shadow">120 FPS</button>
+                        <button id="fps-settings-infinite" class="shadow">Sınırsız FPS</button>
+                    </div>
                 </div>
-                <div class="items">
-                    <div class="item">
-                        <label for="view-distance">Görüş Mesafesi Kalitesi</label>
-                        <input id="graphic-settings-view-distance" class="shadow" name="view-distance" type="number">
+                <div class="resolution-container shadow">
+                    <div class="title">
+                        <p>3D Resolution</p>
+                        <span></span>
                     </div>
-                    <div class="item">
-                        <label for="anti-aliasing">Kenar Yumuşatma</label>
-                        <input id="graphic-settings-anti-aliasing" class="shadow" name="anti-aliasing" type="number">
-                    </div>
-                    <div class="item">
-                        <label for="shadow-quality">Gölge Kalitesi</label>
-                        <input id="graphic-settings-shadow-quality" class="shadow" name="shadow-quality" type="number">
-                    </div>
-                    <div class="item">
-                        <label for="post-processing">Post Processing</label>
-                        <input id="graphic-settings-post-processing" class="shadow" name="post-processing" type="number">
-                    </div>
-                    <div class="item">
-                        <label for="texture-quality">Kaplama Kalitesi</label>
-                        <input id="graphic-settings-texture-quality" class="shadow" name="texture-quality" type="number">
-                    </div>
-                    <div class="item">
-                        <label for="effect-quality">Efekt Kalitesi</label>
-                        <input id="graphic-settings-effect-quality" class="shadow" name="effect-quality" type="number">
+                    <div class="input">
+                        <img id="3d-resolution-lower-arrow" src="assets/svgs/arrow.svg" class="arrow">
+                        <p><span id="3d-resolution-text">10</span>%</p>
+                        <img id="3d-resolution-higher-arrow" src="assets/svgs/arrow.svg" class="arrow">
                     </div>
                     <div class="button">
-                        <button id="graphic-settings-submit" class="shadow">Kaydet</button>
+                        <button id="3d-resolution-button" class="shadow">Kaydet</button>
+                    </div>
+                </div>
+                <div class="anti-aliasing-container shadow">
+                    <div class="title">
+                        <p>Anti Aliasing</p>
+                        <span></span>
+                    </div>
+                    <div class="buttons">
+                        <button id="anti-aliasing-enable" class="enable shadow">Etkinleştir</button>
+                        <button id="anti-aliasing-disable" class="disable shadow">Devre Dışı Bırak</button>
+                        <button id="anti-aliasing-low" class="low shadow">Düşük</button>
+                        <button id="anti-aliasing-high" class="high shadow">Yüksek</button>
+                    </div>
+                </div>
+                <div class="auto-settings-container shadow">
+                    <div class="title">
+                        <p>Otomatik Ayarlar</p>
+                        <span></span>
+                    </div>
+                    <div class="buttons">
+                        <button id="auto-settings-performance" class="performance shadow">Peformans</button>
+                        <button id="auto-settings-balanced" class="balanced shadow">Dengeli</button>
+                        <button id="auto-settings-cinematic" class="cinematic shadow">Grafik</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="graphic-settings-container shadow">
+                    <div class="title">
+                        <div class="text"><p>Grafik Ayarları</p><img src="assets/svgs/questionmark.svg" title="Bütün değerler 0 ile 5 arasında olmak zorundadır." height="20px" alt=""></div>
+                        <span></span>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <label for="view-distance">Görüş Mesafesi Kalitesi</label>
+                            <input id="graphic-settings-view-distance" class="shadow" name="view-distance" type="number">
+                        </div>
+                        <div class="item">
+                            <label for="anti-aliasing">Kenar Yumuşatma</label>
+                            <input id="graphic-settings-anti-aliasing" class="shadow" name="anti-aliasing" type="number">
+                        </div>
+                        <div class="item">
+                            <label for="shadow-quality">Gölge Kalitesi</label>
+                            <input id="graphic-settings-shadow-quality" class="shadow" name="shadow-quality" type="number">
+                        </div>
+                        <div class="item">
+                            <label for="post-processing">Post Processing</label>
+                            <input id="graphic-settings-post-processing" class="shadow" name="post-processing" type="number">
+                        </div>
+                        <div class="item">
+                            <label for="texture-quality">Kaplama Kalitesi</label>
+                            <input id="graphic-settings-texture-quality" class="shadow" name="texture-quality" type="number">
+                        </div>
+                        <div class="item">
+                            <label for="effect-quality">Efekt Kalitesi</label>
+                            <input id="graphic-settings-effect-quality" class="shadow" name="effect-quality" type="number">
+                        </div>
+                        <div class="button">
+                            <button id="graphic-settings-submit" class="shadow">Kaydet</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer>
-        <div class="section">
-            <p><b>Sensei</b></p>
-            <div class="icons">
-                <a href="https://www.youtube.com/channel/UC-dn_yOWPow9SkxhafWFZEg" target="_blank"><img src="assets/svgs/youtube.svg"></a>
-                <a href="https://www.twitch.tv/ssenseim" target="_blank"><img class="twitch" src="assets/svgs/twitch.svg"></a>
+        <footer>
+            <div class="section">
+                <p><b>Sensei</b></p>
+                <div class="icons">
+                    <a href="https://www.youtube.com/channel/UC-dn_yOWPow9SkxhafWFZEg" target="_blank"><img src="assets/svgs/youtube.svg"></a>
+                    <a href="https://www.twitch.tv/ssenseim" target="_blank"><img class="twitch" src="assets/svgs/twitch.svg"></a>
+                </div>
             </div>
-        </div>
-        <div class="section">
-            <p>Developed By <a href="http://steamcommunity.com/profiles/76561198151041514" target="_blank"><b>Emur</b></a></p>
-        </div>
-        <div class="section reload">
-            <img id="reload-settings" src="assets/svgs/reload.svg">
-        </div>
-    </footer>
+            <div class="section">
+                <p>Developed By <a href="http://steamcommunity.com/profiles/76561198151041514" target="_blank"><b>Emur</b></a></p>
+            </div>
+            <div class="section reload">
+                <img id="reload-settings" src="assets/svgs/reload.svg">
+            </div>
+        </footer>
+    </div>
   </body>
   <script src="assets/app.js"></script>
   <script src="assets/js/notifications.js"></script>
@@ -128,6 +138,7 @@
   <script src="assets/js/auto-settings.js"></script>
   <script src="assets/js/anti-aliasing.js"></script>
   <script src="assets/js/reload.js"></script>
+  <script src="assets/js/market-selection.js"></script>
 </html>
 
 <!-- FSociety was here -->
