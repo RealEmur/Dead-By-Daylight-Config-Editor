@@ -25,12 +25,6 @@ class Functions{
             return false;
         }
     }
-    static GetFilePath(file){
-        const configs = {"engine": "Engine.ini", "game": "GameUserSettings.ini"};
-        const markets = {"steam": "WindowsNoEditor", "epic": "EGS"};
-        return process.env.APPDATA+`/../Local/DeadByDaylight/Saved/Config/${markets[SelectedMarket]}/${configs[file]}`;
-    }
-    
 }
 
 module.exports = Functions;

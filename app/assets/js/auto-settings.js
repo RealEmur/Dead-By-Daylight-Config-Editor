@@ -5,15 +5,15 @@ const cinematicButton = window.document.getElementById('auto-settings-cinematic'
 function UpdateSettings(ViewDistanceQuality = "0", AntiAliasingQuality = "0", ShadowQuality = "0", PostProcessQuality = "0", TextureQuality = "0", EffectsQuality = "0", ScreenResolution = "10"){
     let success = true;
 
-    if(!Functions.UpdateSetting(Functions.GetFilePath("game"), "ViewDistanceQuality", ViewDistanceQuality)) success = false;
-    if(!Functions.UpdateSetting(Functions.GetFilePath("game"), "AntiAliasingQuality", AntiAliasingQuality)) success = false;
-    if(!Functions.UpdateSetting(Functions.GetFilePath("game"), "ShadowQuality", ShadowQuality)) success = false;
-    if(!Functions.UpdateSetting(Functions.GetFilePath("game"), "PostProcessQuality", PostProcessQuality)) success = false;
-    if(!Functions.UpdateSetting(Functions.GetFilePath("game"), "TextureQuality", TextureQuality)) success = false;
-    if(!Functions.UpdateSetting(Functions.GetFilePath("game"), "EffectsQuality", EffectsQuality)) success = false;
-    if(!Functions.UpdateSetting(Functions.GetFilePath("game"), "ScreenResolution", ScreenResolution)) success = false;
+    if(!Functions.UpdateSetting(ConfigFilePath, "ViewDistanceQuality", ViewDistanceQuality)) success = false;
+    if(!Functions.UpdateSetting(ConfigFilePath, "AntiAliasingQuality", AntiAliasingQuality)) success = false;
+    if(!Functions.UpdateSetting(ConfigFilePath, "ShadowQuality", ShadowQuality)) success = false;
+    if(!Functions.UpdateSetting(ConfigFilePath, "PostProcessQuality", PostProcessQuality)) success = false;
+    if(!Functions.UpdateSetting(ConfigFilePath, "TextureQuality", TextureQuality)) success = false;
+    if(!Functions.UpdateSetting(ConfigFilePath, "EffectsQuality", EffectsQuality)) success = false;
+    if(!Functions.UpdateSetting(ConfigFilePath, "ScreenResolution", ScreenResolution)) success = false;
     GetGraphicValues();
-    set3dResolution(Functions.GetValue(Functions.GetFilePath("game"), "ScreenResolution"));
+    set3dResolution(Functions.GetValue(ConfigFilePath, "ScreenResolution"));
     sendNotification(success, success ? "Grafik ayarlarını değiştirme başarılı!" : "Grafik ayarlarını değiştirirken bir hata oluştu.");
 } 
 
